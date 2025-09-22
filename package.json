@@ -1,0 +1,39 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "Educational calculator app for debugging workshops",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:buggy": "node buggy-server.js",
+    "dev": "node dev-start.js",
+    "dev:working": "nodemon server.js",
+    "dev:buggy": "nodemon buggy-server.js",
+    "dev:debug": "nodemon --inspect server.js",
+    "dev:debug-buggy": "nodemon --inspect=9230 buggy-server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["calculator", "education", "debugging", "javascript", "express"],
+  "author": "Engineering Academy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "nodemon": "^3.0.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"]
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,223 @@
+/* Responsive Design Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .calculator-container {
+        max-width: 350px;
+    }
+    
+    .calculator {
+        padding: 15px;
+    }
+    
+    .btn {
+        height: 55px;
+        font-size: 16px;
+    }
+    
+    .main-display {
+        font-size: 28px;
+    }
+    
+    .memory-btn {
+        font-size: 12px;
+    }
+    
+    .function-btn {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .calculator-container {
+        max-width: 300px;
+        width: 100%;
+        max-width: 800px;
+    }
+    
+    .calculator {
+        padding: 12px;
+    }
+    
+    .display-section {
+        padding: 12px;
+        min-height: 70px;
+    }
+    
+    .main-display {
+        font-size: 24px;
+        min-height: 32px;
+    }
+    
+    .history-display {
+        font-size: 12px;
+    }
+    
+    .operation-display {
+        font-size: 14px;
+    }
+    
+    .button-grid {
+        gap: 8px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    .memory-btn {
+        font-size: 10px;
+    }
+    
+    .function-btn {
+        font-size: 12px;
+    }
+    
+    .history-panel {
+        padding: 12px;
+    }
+    
+    .history-header h3 {
+        font-size: 14px;
+    }
+    
+    .clear-history-btn {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    .error-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 15px;
+    }
+}
+
+/* Large Screen Styles */
+@media (min-width: 1200px) {
+    .calculator-container {
+        max-width: 450px;
+    }
+    
+    .calculator {
+        padding: 25px;
+    }
+    
+    .btn {
+        height: 65px;
+        font-size: 20px;
+    }
+    
+    .main-display {
+        font-size: 36px;
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .calculator-container {
+        max-width: 400px;
+    }
+    
+    .display-section {
+        min-height: 60px;
+    }
+    
+    .main-display {
+        font-size: 22px;
+        min-height: 28px;
+    }
+    
+    .btn {
+        height: 45px;
+        font-size: 14px;
+    }
+    
+    .history-panel.active {
+        max-height: 200px;
+    }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .btn {
+        border-width: 0.5px;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+    
+    .history-panel {
+        transition: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .btn:active {
+        transform: none;
+    }
+    
+    @keyframes buttonPress {
+        0% { transform: none; }
+        100% { transform: none; }
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .calculator {
+        border: 3px solid #ffffff;
+    }
+    
+    .display-section {
+        border: 2px solid #ffffff;
+    }
+    
+    .btn {
+        border-width: 2px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .calculator {
+        box-shadow: none;
+        border: 2px solid #000;
+        background: white;
+        color: black;
+    }
+    
+    .btn {
+        border: 1px solid #000;
+        background: white;
+        color: black;
+    }
+    
+    .error-modal {
+        display: none !important;
+    }
+}
