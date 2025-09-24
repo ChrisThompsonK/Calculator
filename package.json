@@ -4,7 +4,8 @@
   "description": "Educational calculator app for debugging workshops",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node dev-start.js",
+    "start:working": "node server.js",
     "start:buggy": "node buggy-server.js",
     "dev": "node dev-start.js",
     "dev:working": "nodemon server.js",

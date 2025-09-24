@@ -1,7 +1,3 @@
-/**
- * Main Calculator Class
- * Orchestrates all calculator functionality and handles user interactions
- */
 class Calculator {
     constructor() {
         this.displayManager = new DisplayManager();
@@ -16,12 +12,10 @@ class Calculator {
         this.initializeEventListeners();
         this.initializeKeyboardSupport();
         
-        // Make calculator available globally for history callback
         window.calculator = this;
     }
     
     initializeEventListeners() {
-        // Number buttons
         document.querySelectorAll('[data-number]').forEach(button => {
             button.addEventListener('click', (e) => {
                 this.handleNumberInput(e.target.dataset.number);
@@ -29,7 +23,6 @@ class Calculator {
             });
         });
         
-        // Operation buttons
         document.querySelectorAll('[data-action]').forEach(button => {
             button.addEventListener('click', (e) => {
                 this.handleAction(e.target.dataset.action);
@@ -40,7 +33,6 @@ class Calculator {
     
     initializeKeyboardSupport() {
         document.addEventListener('keydown', (e) => {
-            // Prevent default for calculator keys
             if (this.isCalculatorKey(e.key)) {
                 e.preventDefault();
             }
@@ -188,7 +180,6 @@ class Calculator {
                 this.displayManager.updateHistoryDisplay(expression);
                 this.displayManager.updateOperationDisplay('');
                 
-                // Add to history
                 this.historyManager.addCalculation(expression, this.displayManager.formatNumber(result));
                 
                 this.previousValue = null;
@@ -334,18 +325,14 @@ class Calculator {
         }, 100);
     }
     
-    /**
-     * Reset calculator to initial state
-     */
+    
     reset() {
         this.handleClearAll();
         this.memoryManager.clear();
         this.historyManager.clearHistory();
     }
     
-    /**
-     * Get current calculator state (for debugging)
-     */
+    
     getState() {
         return {
             currentValue: this.displayManager.getCurrentValue(),
@@ -358,17 +345,14 @@ class Calculator {
     }
 }
 
-// Initialize calculator when page loads
 document.addEventListener('DOMContentLoaded', () => {
     new Calculator();
 });
 
-// Export for testing purposes
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Calculator;
 }
 
-// Make Calculator available globally for tests
 if (typeof window !== 'undefined') {
     window.Calculator = Calculator;
 }

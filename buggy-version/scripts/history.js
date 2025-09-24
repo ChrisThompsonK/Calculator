@@ -1,7 +1,4 @@
-/**
- * History Management Module
- * Handles calculation history and history panel functionality
- */
+
 class HistoryManager {
     constructor() {
         this.historyPanel = document.getElementById('historyPanel');
@@ -18,22 +15,18 @@ class HistoryManager {
     }
     
     initializeEventListeners() {
-        // History toggle button
+
         this.historyToggleBtn.addEventListener('click', () => {
             this.toggleHistory();
         });
         
-        // Clear history button
+
         this.clearHistoryBtn.addEventListener('click', () => {
             this.clearHistory();
         });
     }
     
-    /**
-     * Add a calculation to history
-     * @param {string} expression - The calculation expression
-     * @param {string} result - The calculation result
-     */
+    
     addCalculation(expression, result) {
         const calculation = {
             expression: expression,
@@ -41,7 +34,7 @@ class HistoryManager {
             timestamp: new Date().toLocaleTimeString()
         };
         
-        // Add to beginning of array
+
         this.calculations.unshift(calculation);
         
         if (this.calculations.length > this.maxHistoryItems) {
@@ -52,9 +45,7 @@ class HistoryManager {
         this.saveHistoryToStorage();
     }
     
-    /**
-     * Update the history display in the panel
-     */
+    
     updateHistoryDisplay() {
         this.historyList.innerHTML = '';
         
@@ -81,7 +72,7 @@ class HistoryManager {
                 </div>
             `;
             
-            // Click to use result
+
             historyItem.addEventListener('click', () => {
                 this.useHistoryResult(calc.result);
             });
@@ -90,9 +81,7 @@ class HistoryManager {
         });
     }
     
-    /**
-     * Toggle history panel visibility
-     */
+    
     toggleHistory() {
         this.isHistoryVisible = !this.isHistoryVisible;
         
@@ -107,51 +96,38 @@ class HistoryManager {
         }
     }
     
-    /**
-     * Clear all history
-     */
+    
     clearHistory() {
         this.calculations = [];
         this.updateHistoryDisplay();
         this.saveHistoryToStorage();
     }
     
-    /**
-     * Use a result from history in the calculator
-     * @param {string} result - The result to use
-     */
+    
     useHistoryResult(result) {
-        // This will be called by the main calculator
+
         if (window.calculator && window.calculator.displayManager) {
             window.calculator.displayManager.updateMainDisplay(result);
             window.calculator.displayManager.startNewNumber();
         }
         
-        // Close history panel after selection
+
         if (this.isHistoryVisible) {
             this.toggleHistory();
         }
     }
     
-    /**
-     * Get the most recent calculation
-     * @returns {object|null} The most recent calculation or null if none exists
-     */
+    
     getLastCalculation() {
         return this.calculations.length > 0 ? this.calculations[0] : null;
     }
     
-    /**
-     * Get all calculations
-     * @returns {array} Array of all calculations
-     */
+    
     getAllCalculations() {
         return [...this.calculations];
     }
     
-    /**
-     * Save history to localStorage
-     */
+    
     saveHistoryToStorage() {
         try {
             localStorage.setItem('calculatorHistory', this.calculations);
@@ -160,9 +136,7 @@ class HistoryManager {
         }
     }
     
-    /**
-     * Load history from localStorage
-     */
+    
     loadHistoryFromStorage() {
         try {
             const savedHistory = localStorage.getItem('calculatorHistory');
@@ -176,10 +150,7 @@ class HistoryManager {
         }
     }
     
-    /**
-     * Export history as text
-     * @returns {string} History formatted as text
-     */
+    
     exportHistory() {
         if (this.calculations.length === 0) {
             return 'No calculations in history';
@@ -195,16 +166,13 @@ class HistoryManager {
         return exportText;
     }
     
-    /**
-     * Import history from text (for future functionality)
-     * @param {string} historyText - History text to import
-     */
+    
     importHistory(historyText) {
-        // This could be implemented for importing history from files
-        // For now, it's a placeholder for future enhancement
+
+
         console.log('Import functionality not yet implemented');
     }
 }
 
-// Export for use in other modules
+
 window.HistoryManager = HistoryManager;

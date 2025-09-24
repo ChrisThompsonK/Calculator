@@ -10,62 +10,62 @@
 <body>
     <div class="calculator-container">
         <div class="calculator">
-            <!-- Display Section -->
+            
             <div class="display-section">
                 <div class="history-display" id="historyDisplay"></div>
                 <div class="main-display" id="mainDisplay">0</div>
                 <div class="operation-display" id="operationDisplay"></div>
             </div>
             
-            <!-- Memory Indicator -->
+            
             <div class="memory-indicator" id="memoryIndicator">M</div>
             
-            <!-- Button Grid -->
+            
             <div class="button-grid">
-                <!-- Row 1: Memory and Clear Functions -->
+                
                 <button class="btn memory-btn" data-action="memory-clear">MC</button>
                 <button class="btn memory-btn" data-action="memory-recall">MR</button>
                 <button class="btn memory-btn" data-action="memory-add">M+</button>
                 <button class="btn memory-btn" data-action="memory-subtract">M-</button>
                 
-                <!-- Row 2: Clear and Advanced Functions -->
+                
                 <button class="btn clear-btn" data-action="clear-entry">CE</button>
                 <button class="btn clear-btn" data-action="clear-all">C</button>
                 <button class="btn operation-btn" data-action="backspace">⌫</button>
                 <button class="btn operation-btn" data-action="divide">÷</button>
                 
-                <!-- Row 3: Numbers and Operations -->
+                
                 <button class="btn number-btn" data-number="7">7</button>
                 <button class="btn number-btn" data-number="8">8</button>
                 <button class="btn number-btn" data-number="9">9</button>
                 <button class="btn operation-btn" data-action="multiply">×</button>
                 
-                <!-- Row 4: Numbers and Operations -->
+                
                 <button class="btn number-btn" data-number="4">4</button>
                 <button class="btn number-btn" data-number="5">5</button>
                 <button class="btn number-btn" data-number="6">6</button>
                 <button class="btn operation-btn" data-action="add">-</button>
                 
-                <!-- Row 5: Numbers and Operations -->
+                
                 <button class="btn number-btn" data-number="1">1</button>
                 <button class="btn number-btn" data-number="2">2</button>
                 <button class="btn number-btn" data-number="3">3</button>
                 <button class="btn operation-btn" data-action="add">+</button>
                 
-                <!-- Row 6: Advanced Functions -->
+                
                 <button class="btn function-btn" data-action="sign-toggle">±</button>
                 <button class="btn number-btn" data-number="00">0</button>
                 <button class="btn function-btn" data-action="decimal">.</button>
                 <button class="btn equals-btn" data-action="equals">=</button>
                 
-                <!-- Row 7: Scientific Functions -->
+                
                 <button class="btn function-btn" data-action="percentage">%</button>
                 <button class="btn function-btn" data-action="square-root">√</button>
                 <button class="btn function-btn" data-action="square">x²</button>
                 <button class="btn function-btn" data-action="history-toggle">History</button>
             </div>
             
-            <!-- History Panel -->
+            
             <div class="history-panel" id="historyPanel">
                 <div class="history-header">
                     <h3>Calculation History</h3>
@@ -75,7 +75,7 @@
             </div>
         </div>
         
-        <!-- Error Modal -->
+        
         <div class="error-modal" id="errorModal">
             <div class="error-content">
                 <span class="error-close" id="errorClose">&times;</span>
@@ -85,7 +85,7 @@
         </div>
     </div>
     
-    <!-- Scripts -->
+    
     <script src="scripts/display.js"></script>
     <script src="scripts/memory.js"></script>
     <script src="scripts/history.js"></script>

@@ -31,11 +31,14 @@ npm run dev
 5. Fill out the bug report template in `docs/bug-report-template.md`
 
 ### For Instructors
-1. Review the comprehensive guide in `docs/bug-hunting-guide.md`
-2. Set up the workshop environment using `npm run dev`
-3. Guide students through systematic debugging
-4. Use both client-side (browser) and server-side (VS Code) debugging tools
-5. Use the provided assessment criteria
+1. **Start Here**: Review `trainer-docs/README.md` for complete setup guide
+2. **Choose Difficulty**: Use setup scripts in `trainer-docs/` to configure workshop mode
+3. **Bug Reference**: Complete solutions available in `trainer-docs/trainer-bug-reference.md`
+4. **Workshop Modes**: 
+   - Full Help (default) - Complete guides available
+   - Zero Help - `./trainer-docs/setup-zero-help.sh` (intermediate)
+   - Ultra Zero Help - `./trainer-docs/setup-ultra-zero-help.sh` (expert)
+5. **Safety**: All scripts tested and documented in `trainer-docs/SCRIPT-TESTING-REPORT.md`
 
 ## 📁 Project Structure
 
@@ -52,10 +55,17 @@ Calculator/
 ├── buggy-server.js        # Express.js server (buggy version)
 ├── dev-start.js           # Development environment orchestrator
 ├── tests/                 # Test suites
-├── docs/                  # Documentation and guides
-│   ├── PRD.md             # Product Requirements Document
-│   ├── bug-hunting-guide.md # Complete instructor guide
+├── docs/                  # Student documentation
+│   ├── bug-hunting-guide.md # Debugging methodology guide
 │   └── bug-report-template.md # Student worksheet
+├── trainer-docs/          # Trainer-only documentation & tools
+│   ├── README.md          # Trainer quick start guide
+│   ├── TRAINER-MODES-GUIDE.md # Workshop difficulty modes
+│   ├── trainer-bug-reference.md # Complete bug solutions
+│   ├── setup-zero-help.sh # Remove help files (intermediate mode)
+│   ├── setup-ultra-zero-help.sh # Maximum stealth mode
+│   ├── restore-help.sh    # Restore all documentation
+│   └── test-all-scripts.sh # Safety testing for setup scripts
 └── package.json           # Dependencies and scripts
 ```
 

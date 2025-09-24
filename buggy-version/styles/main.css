@@ -1,4 +1,4 @@
-/* Main Calculator Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@ body {
     border: 1px solid #34495e;
 }
 
-/* Display Section */
+
 .display-section {
     background: #1a252f;
     border-radius: 10px;
@@ -67,7 +67,7 @@ body {
     margin-top: 5px;
 }
 
-/* Memory Indicator */
+
 .memory-indicator {
     position: absolute;
     top: 30px;
@@ -88,7 +88,7 @@ body {
     display: flex;
 }
 
-/* Button Grid */
+
 .button-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -96,7 +96,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* Button Base Styles */
+
 .btn {
     border: none;
     border-radius: 8px;
@@ -120,7 +120,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Button Type Styles */
+
 .number-btn {
     background: #34495e;
     color: #ecf0f1;
@@ -183,7 +183,7 @@ body {
     background: #1abc9c;
 }
 
-/* History Panel */
+
 .history-panel {
     background: #1a252f;
     border-radius: 10px;
@@ -249,7 +249,7 @@ body {
     border-bottom: none;
 }
 
-/* Error Modal */
+
 .error-modal {
     display: none;
     position: fixed;
@@ -297,7 +297,7 @@ body {
     line-height: 1.5;
 }
 
-/* Button Press Animation */
+
 @keyframes buttonPress {
     0% { transform: scale(1); }
     50% { transform: scale(0.95); }
@@ -308,7 +308,7 @@ body {
     animation: buttonPress 0.1s ease;
 }
 
-/* Scrollbar Styling */
+
 .history-list::-webkit-scrollbar {
     width: 6px;
 }

@@ -1,6 +1,6 @@
-/* Responsive Design Styles */
 
-/* Tablet Styles */
+
+
 @media (max-width: 768px) {
     .calculator-container {
         max-width: 350px;
@@ -28,7 +28,7 @@
     }
 }
 
-/* Mobile Styles */
+
 @media (max-width: 480px) {
     body {
         padding: 10px;
@@ -102,7 +102,7 @@
     }
 }
 
-/* Large Screen Styles */
+
 @media (min-width: 1200px) {
     .calculator-container {
         max-width: 450px;
@@ -122,7 +122,7 @@
     }
 }
 
-/* Landscape Mobile Optimization */
+
 @media (max-width: 768px) and (orientation: landscape) {
     body {
         align-items: center;
@@ -152,14 +152,14 @@
     }
 }
 
-/* High DPI Display Support */
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .btn {
         border-width: 0.5px;
     }
 }
 
-/* Accessibility - Reduced Motion */
+
 @media (prefers-reduced-motion: reduce) {
     .btn {
         transition: none;
@@ -183,7 +183,7 @@
     }
 }
 
-/* High Contrast Mode Support */
+
 @media (prefers-contrast: high) {
     .calculator {
         border: 3px solid #ffffff;
@@ -198,7 +198,7 @@
     }
 }
 
-/* Print Styles */
+
 @media print {
     body {
         background: white;
